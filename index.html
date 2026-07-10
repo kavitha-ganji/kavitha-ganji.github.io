@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ms. Y — AI Engineer on Enterprise Data Platforms</title>
+<meta name="description" content="AI Engineer with 10+ years building enterprise data platforms on Azure Databricks in Banking &amp; Financial Services. I build AI systems that survive production data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F5F6F3;
+  --panel:#FFFFFF;
+  --ink:#101B2D;
+  --ink-soft:#445062;
+  --line:#D8DCD9;
+  --teal:#0E7A6E;
+  --teal-deep:#0A5A52;
+  --amber:#D98E1F;
+  --mono:'IBM Plex Mono',monospace;
+  --body:'IBM Plex Sans',sans-serif;
+  --display:'Archivo',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);line-height:1.6;font-size:17px}
+a{color:var(--teal-deep)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+
+/* nav */
+nav{position:sticky;top:0;background:rgba(245,246,243,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1060px;margin:0 auto}
+.brand{font-family:var(--mono);font-size:14px;text-decoration:none;color:var(--ink);letter-spacing:.04em}
+.brand b{color:var(--teal)}
+.nav-links{display:flex;gap:22px}
+.nav-links a{font-family:var(--mono);font-size:13px;text-decoration:none;color:var(--ink-soft)}
+.nav-links a:hover{color:var(--teal-deep)}
+
+/* hero */
+header{padding:84px 0 40px}
+.eyebrow{font-family:var(--mono);font-size:13px;letter-spacing:.12em;color:var(--teal-deep);display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--amber)}
+h1{font-family:var(--display);font-variation-settings:'wdth' 112;font-weight:760;font-size:clamp(38px,6.4vw,64px);line-height:1.04;letter-spacing:-.015em;margin:18px 0 20px;max-width:17ch}
+h1 em{font-style:normal;color:var(--teal)}
+.lede{max-width:56ch;color:var(--ink-soft);font-size:19px}
+.hero-cta{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{font-family:var(--mono);font-size:14px;text-decoration:none;padding:12px 20px;border:1.5px solid var(--ink)}
+.btn.primary{background:var(--ink);color:var(--paper)}
+.btn.primary:hover{background:var(--teal-deep);border-color:var(--teal-deep)}
+.btn.ghost{color:var(--ink)}
+.btn.ghost:hover{border-color:var(--teal);color:var(--teal-deep)}
+
+/* pipeline signature */
+.pipeline{margin:56px 0 0;border:1px solid var(--line);background:var(--panel);padding:26px 20px 10px}
+.pipe-label{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--ink-soft);padding:0 6px 6px}
+.pipeline svg{width:100%;height:auto;display:block}
+
+/* sections */
+section{padding:64px 0;border-top:1px solid var(--line)}
+.sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:34px}
+.sec-tag{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--amber)}
+h2{font-family:var(--display);font-variation-settings:'wdth' 106;font-weight:700;font-size:30px;letter-spacing:-.01em}
+
+/* proof strip */
+.proof{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.proof div{background:var(--panel);padding:22px}
+.proof strong{font-family:var(--display);font-weight:740;font-size:34px;display:block;line-height:1.1}
+.proof span{font-family:var(--mono);font-size:12.5px;color:var(--ink-soft);letter-spacing:.04em}
+
+/* projects */
+.case{border:1px solid var(--line);background:var(--panel);padding:28px;margin-bottom:20px;display:grid;grid-template-columns:150px 1fr;gap:24px}
+.case-meta{font-family:var(--mono);font-size:12.5px;color:var(--ink-soft);border-right:2px solid var(--teal);padding-right:16px}
+.case-meta b{color:var(--teal-deep);display:block;margin-bottom:6px;letter-spacing:.08em}
+.case h3{font-family:var(--display);font-weight:680;font-size:21px;margin-bottom:8px}
+.case p{color:var(--ink-soft);max-width:64ch}
+.case a{font-family:var(--mono);font-size:13.5px;display:inline-block;margin-top:12px}
+.stack{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
+.chip{font-family:var(--mono);font-size:12px;border:1px solid var(--line);padding:3px 9px;color:var(--ink-soft)}
+
+/* writing */
+.post{display:flex;justify-content:space-between;gap:20px;padding:18px 4px;border-bottom:1px solid var(--line);text-decoration:none}
+.post:hover .post-title{color:var(--teal-deep)}
+.post-title{font-weight:600;color:var(--ink)}
+.post time{font-family:var(--mono);font-size:13px;color:var(--ink-soft);white-space:nowrap}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.skill-col{border:1px solid var(--line);background:var(--panel);padding:22px}
+.skill-col h3{font-family:var(--mono);font-size:13px;letter-spacing:.1em;color:var(--teal-deep);margin-bottom:12px}
+.skill-col ul{list-style:none}
+.skill-col li{padding:5px 0;color:var(--ink-soft);font-size:15.5px;border-bottom:1px dashed var(--line)}
+.skill-col li:last-child{border:none}
+
+/* contact / footer */
+footer{border-top:2px solid var(--ink);padding:56px 0 72px}
+footer h2{margin-bottom:14px}
+.contact-links{display:flex;gap:26px;flex-wrap:wrap;margin-top:18px}
+.contact-links a{font-family:var(--mono);font-size:14.5px}
+.foot-note{margin-top:44px;font-family:var(--mono);font-size:12px;color:var(--ink-soft)}
+
+@media(max-width:720px){
+  .nav-links{display:none}
+  .proof{grid-template-columns:1fr}
+  .case{grid-template-columns:1fr}
+  .case-meta{border-right:none;border-bottom:2px solid var(--teal);padding:0 0 12px}
+  header{padding:56px 0 28px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="#top">ms<b>·</b>y</a>
+    <div class="nav-links">
+      <a href="#work">work</a>
+      <a href="#writing">writing</a>
+      <a href="#skills">skills</a>
+      <a href="#contact">contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="wrap" id="top">
+  <p class="eyebrow">SENIOR DATA ENGINEER → AI ENGINEER · BANKING &amp; FINANCIAL SERVICES</p>
+  <h1>I make AI work on <em>enterprise data platforms</em>.</h1>
+  <p class="lede">Ten years building lakehouse platforms on Azure Databricks for banking — fraud, authorizations, and transaction data at scale — taught me where AI projects actually fail: the data and deployment layer. I build RAG and ML systems that survive production: governed, monitored, and cost-aware.</p>
+  <div class="hero-cta">
+    <a class="btn primary" href="#work">See case studies</a>
+    <a class="btn ghost" href="https://github.com/YOUR-USERNAME">GitHub ↗</a>
+  </div>
+
+  <!-- Signature: the pipeline I ship, end to end -->
+  <div class="pipeline" aria-label="End-to-end AI pipeline diagram">
+    <p class="pipe-label">WHAT I OWN, END TO END</p>
+    <svg viewBox="0 0 920 150" xmlns="http://www.w3.org/2000/svg" role="img">
+      <defs>
+        <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+          <path d="M0,0 L10,5 L0,10 z" fill="#0E7A6E"/>
+        </marker>
+      </defs>
+      <!-- flow line -->
+      <line x1="150" y1="62" x2="238" y2="62" stroke="#0E7A6E" stroke-width="2" marker-end="url(#arr)"/>
+      <line x1="388" y1="62" x2="476" y2="62" stroke="#0E7A6E" stroke-width="2" marker-end="url(#arr)"/>
+      <line x1="626" y1="62" x2="714" y2="62" stroke="#0E7A6E" stroke-width="2" marker-end="url(#arr)"/>
+      <!-- stages -->
+      <g font-family="IBM Plex Mono, monospace">
+        <rect x="10" y="34" width="140" height="56" fill="none" stroke="#101B2D" stroke-width="1.5"/>
+        <text x="80" y="58" text-anchor="middle" font-size="13" fill="#101B2D" font-weight="600">SOURCE DATA</text>
+        <text x="80" y="76" text-anchor="middle" font-size="10.5" fill="#445062">lakehouse · streams</text>
+
+        <rect x="248" y="34" width="140" height="56" fill="none" stroke="#101B2D" stroke-width="1.5"/>
+        <text x="318" y="58" text-anchor="middle" font-size="13" fill="#101B2D" font-weight="600">PIPELINES</text>
+        <text x="318" y="76" text-anchor="middle" font-size="10.5" fill="#445062">quality · governance</text>
+
+        <rect x="486" y="34" width="140" height="56" fill="none" stroke="#101B2D" stroke-width="1.5"/>
+        <text x="556" y="58" text-anchor="middle" font-size="13" fill="#101B2D" font-weight="600">AI LAYER</text>
+        <text x="556" y="76" text-anchor="middle" font-size="10.5" fill="#445062">RAG · eval · MLflow</text>
+
+        <rect x="724" y="34" width="150" height="56" fill="#101B2D"/>
+        <text x="799" y="58" text-anchor="middle" font-size="13" fill="#F5F6F3" font-weight="600">PRODUCTION</text>
+        <text x="799" y="76" text-anchor="middle" font-size="10.5" fill="#D98E1F">monitored · costed</text>
+      </g>
+      <!-- failure annotation -->
+      <g font-family="IBM Plex Mono, monospace">
+        <line x1="318" y1="98" x2="318" y2="118" stroke="#D98E1F" stroke-width="1.5" stroke-dasharray="3 3"/>
+        <line x1="556" y1="98" x2="556" y2="118" stroke="#D98E1F" stroke-width="1.5" stroke-dasharray="3 3"/>
+        <line x1="318" y1="118" x2="556" y2="118" stroke="#D98E1F" stroke-width="1.5" stroke-dasharray="3 3"/>
+        <text x="437" y="138" text-anchor="middle" font-size="11" fill="#D98E1F">where most AI projects fail — and where I've spent 10 years</text>
+      </g>
+    </svg>
+  </div>
+</header>
+
+<section class="wrap" id="proof">
+  <div class="proof">
+    <div><strong>10+</strong><span>YEARS ON AZURE DATABRICKS · BANKING &amp; FINANCIAL SERVICES</span></div>
+    <div><strong>2×</strong><span>CERTIFIED — DATABRICKS DATA ENGINEER ASSOCIATE · SNOWPRO CORE</span></div>
+    <div><strong>→ AI</strong><span>NEXT: AZURE AI-102 &amp; DATABRICKS GENAI ENGINEER (IN PROGRESS)</span></div>
+  </div>
+</section>
+
+<section class="wrap" id="work">
+  <div class="sec-head"><span class="sec-tag">CASE STUDIES</span><h2>Production work &amp; portfolio builds</h2></div>
+
+  <article class="case">
+    <div class="case-meta"><b>PRODUCTION</b>LAKEHOUSE PLATFORM<br>2022 – PRESENT</div>
+    <div>
+      <h3>Enterprise medallion lakehouse for fraud, authorizations &amp; transactions</h3>
+      <p>Architected end-to-end Azure Databricks pipelines on Medallion Architecture (Bronze/Silver/Gold), landing multi-source data into Delta Lake. Designed star-schema data marts with SCD Type-1/2, complex fact tables across daily, monthly, LTD, and cycle-based loads, and a metadata-driven orchestration framework with technical data-quality validation — cutting pipeline failures and hardening SLA adherence through PySpark tuning.</p>
+      <div class="stack"><span class="chip">Azure Databricks</span><span class="chip">Delta Lake</span><span class="chip">PySpark</span><span class="chip">ADF</span><span class="chip">Informatica / SSIS</span></div>
+      <a href="#">Read the case study →</a>
+    </div>
+  </article>
+
+  <article class="case">
+    <div class="case-meta"><b>PORTFOLIO · AI</b>RAG SYSTEM<br>2026</div>
+    <div>
+      <h3>RAG over financial compliance documents with production-grade retrieval</h3>
+      <p>End-to-end retrieval system over banking policy and compliance documents: Medallion-style ingestion with quality gates, chunking tuned against a golden eval set, hybrid search, and per-query cost monitoring — bringing lakehouse discipline to an LLM workload. Write-up covers what broke and why.</p>
+      <div class="stack"><span class="chip">Azure AI Search</span><span class="chip">Databricks Vector Search</span><span class="chip">MLflow</span><span class="chip">RAGAS</span></div>
+      <a href="#">Read the case study →</a>
+    </div>
+  </article>
+
+  <article class="case">
+    <div class="case-meta"><b>PORTFOLIO · AI</b>REAL-TIME ML<br>2026</div>
+    <div>
+      <h3>Streaming fraud features feeding live model inference</h3>
+      <p>A Kafka-to-Delta streaming feature pipeline serving a real-time fraud-scoring endpoint with drift monitoring and automated rollback — the AI-layer extension of the transaction platforms I've run in production for years. Includes the batch-vs-streaming cost comparison nobody publishes.</p>
+      <div class="stack"><span class="chip">Spark Structured Streaming</span><span class="chip">Kafka</span><span class="chip">Model Serving</span><span class="chip">Unity Catalog</span></div>
+      <a href="#">Read the case study →</a>
+    </div>
+  </article>
+</section>
+
+<section class="wrap" id="writing">
+  <div class="sec-head"><span class="sec-tag">WRITING</span><h2>Teaching in public</h2></div>
+  <a class="post" href="#"><span class="post-title">RAG on Databricks: applying Medallion discipline to LLM ingestion</span><time>Jul 2026</time></a>
+  <a class="post" href="#"><span class="post-title">Fine-tuning vs. RAG: a decision framework from the data side</span><time>Jun 2026</time></a>
+  <a class="post" href="#"><span class="post-title">From SCD Type-2 to vector indexes: what data modelling teaches you about retrieval</span><time>May 2026</time></a>
+</section>
+
+<section class="wrap" id="skills">
+  <div class="sec-head"><span class="sec-tag">CAPABILITIES</span><h2>The stack</h2></div>
+  <div class="skills">
+    <div class="skill-col">
+      <h3>DATA PLATFORM (10+ YRS)</h3>
+      <ul><li>Azure Databricks · Delta Lake · Unity Catalog</li><li>PySpark · Spark SQL · Spark Streaming</li><li>ADF · ADLS · Synapse · Snowflake</li><li>Medallion Architecture · Star Schema · SCD 1/2</li><li>Kafka · Hive · Hadoop ecosystem</li><li>Informatica · SSIS · SQL Server</li></ul>
+    </div>
+    <div class="skill-col">
+      <h3>AI ENGINEERING (CURRENT FOCUS)</h3>
+      <ul><li>RAG architecture &amp; vector search</li><li>Prompt engineering &amp; agents</li><li>Evaluation (RAGAS, LLM-as-judge)</li><li>Fine-tuning vs. RAG tradeoffs</li><li>Azure OpenAI · Spark ML</li></ul>
+    </div>
+    <div class="skill-col">
+      <h3>MLOPS / DELIVERY</h3>
+      <ul><li>MLflow tracking &amp; registry</li><li>Model serving &amp; monitoring</li><li>CI/CD — GitHub Actions · Docker</li><li>Performance tuning &amp; cost control</li><li>Agile/Scrum · TDD</li></ul>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap" id="contact">
+  <span class="sec-tag">CONTACT</span>
+  <h2>Building AI on enterprise data? Let's talk.</h2>
+  <p class="lede">Open to AI Engineer and LLMOps roles in Canada (on-site or remote) — especially in banking and financial services, where production reliability and governance matter most.</p>
+  <div class="contact-links">
+    <a href="mailto:you@example.com">email</a>
+    <a href="https://github.com/YOUR-USERNAME">github</a>
+    <a href="https://linkedin.com/in/YOUR-PROFILE">linkedin</a>
+    <a href="#">resume (pdf)</a>
+  </div>
+  <p class="foot-note">© 2026 MS. Y · BUILT BY HAND, DEPLOYED ON GITHUB PAGES</p>
+</footer>
+
+</body>
+</html>
